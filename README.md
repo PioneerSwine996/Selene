@@ -21,8 +21,8 @@ This game:
 ## 🕹️ Gameplay Overview
 
 - **Genre:** Interactive Narrative / Choice-Based Adventure  
-- **Platform:** [e.g., PC / Web / Mobile]  
-- **Engine:** [e.g., Unity / Godot / MakeCode Arcade]  
+- **Platform:** PC 
+- **Engine:** Unity
 - **Target Audience:** Teens and young adults (13+)  
 
 ### 🎯 Key Features
