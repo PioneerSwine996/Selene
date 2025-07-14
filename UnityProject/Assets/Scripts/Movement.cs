@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 forceDir = Vector2.zero;
 
-        // replace the falses with input checks for W, A, S, D
-        // try to figure out for yourself which is which, note that x is left and right, and z is back and forth
         if (Input.GetKey(KeyCode.W))
         {
             forceDir += new Vector2((transform.forward).x, (transform.forward).z);
@@ -31,8 +29,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            forceDir = new Vector2((-transform.forward).x, (-transform.forward).y);
-            Debug.Log("Moving Bacward");
+            forceDir = new Vector2((-transform.forward).x, (-transform.forward).z);
+            Debug.Log("Moving Backward");
         }
         if (Input.GetKey(KeyCode.D))
         {
