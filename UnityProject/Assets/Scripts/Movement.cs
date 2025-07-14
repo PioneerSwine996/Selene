@@ -6,18 +6,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float sensitivity;
+    [SerializeField] private Animator anim;
     private float xRotation;
+
+
 
     Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
-    {}
+    { }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+        Animation();
     }
 
     void FixedUpdate()
@@ -29,65 +33,18 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        // Vector2 forceDir = Vector2.zero;
+        movement.Normalize();
+    }
 
-        // if (Input.GetKey(KeyCode.W))
-        // {
-        //     forceDir += new Vector2((transform.forward).x, (transform.forward).z);
-        //     Debug.Log("Moving Forward");
-        // }
-        // if (Input.GetKey(KeyCode.S))
-        // {
-        //     forceDir = new Vector2((-transform.forward).x, (-transform.forward).z);
-        //     Debug.Log("Moving Backward");
-        // }
-        // if (Input.GetKey(KeyCode.D))
-        // {
-        //     forceDir = new Vector2((transform.right).x, (transform.right).z);
-        //     Debug.Log("Moving Right");
-        // }
-        // if (Input.GetKey(KeyCode.A))
-        // {
-        //     forceDir = new Vector2((-transform.right).x, (-transform.right).z);
-        //     Debug.Log("Moving Left");
-        // }
-        // if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
-        // {
-        //     forceDir = Vector2.zero;
-        //     Debug.Log("Not Moving Forward or Backward");
-        // }
-        // if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
-        // {
-        //     forceDir = Vector2.zero;
-        //     Debug.Log("Not Moving Left or Right");
-        // }
-        // if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-        // {
-        //     forceDir = new Vector2((transform.forward - transform.right).x, (transform.forward - transform.right).z);
-        //     Debug.Log("Moving Forward and Left");
-        // }
-        // if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-        // {
-        //     forceDir = new Vector2((transform.forward + transform.right).x, (transform.forward + transform.right).z);
-        //     Debug.Log("Moving Forward and Right");
-        // }
-        // if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-        // {
-        //     forceDir = new Vector2((-transform.forward - transform.right).x, (-transform.forward - transform.right).z);
-        //     Debug.Log("Moving Backward and Left");
-        // }
-        // if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-        // {
-        //     forceDir = new Vector2((-transform.forward + transform.right).x, (-transform.forward + transform.right).z);
-        //     Debug.Log("Moving Backward and Right");
-        // }
-        // if (forceDir.magnitude < .01f)
-        // {
-        //     rb.AddForce(-rb.linearVelocity);
-        // }
-        // else
-        // {
-        //     rb.AddForce(forceDir.normalized * Mathf.Max(0, (moveSpeed - rb.linearVelocity.magnitude)));
-        // }
+    private void Animation()
+    {
+        if (Input.GetAxisRaw("Vertical") < 0)
+        {
+            anim.SetBool("WalkS", true);
+        }
+        else
+        {
+            anim.SetBool("WalkS", false);
+        }
     }
 }
