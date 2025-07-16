@@ -1,6 +1,6 @@
-# 🎮 Three Reasons Why
+# 🎮 Selene
 
-**Three Reasons Why** is an interactive story-driven game focused on **suicide prevention, hope, and healing**. It aims to open conversations about mental health, reduce stigma, and empower players to seek help or support others who are struggling.
+**Selene** is an interactive story-driven game focused on **suicide prevention, hope, and healing**. It aims to open conversations about mental health, reduce stigma, and empower players to seek help or support others who are struggling.
 
 > ⚠️ **Content Warning**: This game contains themes related to mental health and suicide. It is designed to educate and inspire hope, but may be triggering for some. Please play with care.
 
@@ -8,7 +8,7 @@
 
 ## 💡 About the Game
 
-**Three Reasons Why** follows the journey of a character who feels overwhelmed by life—but through the choices players make, they uncover three meaningful reasons to stay, heal, and reach out.
+**Selene** follows the journey of a character who feels overwhelmed by life—but through the choices players make, they uncover three meaningful reasons to stay, heal, and reach out.
 
 This game:
 - Raises awareness about mental health challenges
@@ -73,6 +73,6 @@ This project is open source under the [MIT License](LICENSE), but the story and 
 
 ## 🚧 Disclaimer
 
-**Three Reasons Why** is not a substitute for professional mental health care. If you're in immediate danger or experiencing a crisis, contact a professional or crisis service right away.
+**Selene** is not a substitute for professional mental health care. If you're in immediate danger or experiencing a crisis, contact a professional or crisis service right away.
 
 ---
