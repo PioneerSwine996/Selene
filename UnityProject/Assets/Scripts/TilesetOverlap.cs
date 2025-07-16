@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class TileBasedSceneChanger : MonoBehaviour
 {
-    public Tilemap tilemap; // Assign your Tilemap in Inspector
-    public TileBase[] validTiles; // Drag the 4 target tiles here
-    public string targetSceneName = "NextScene"; // Scene to load
+    public Tilemap tilemap;
+    public TileBase[] validTiles;
+    public GameObject targetObject;
+    public string targetSceneName = "2nd Scene";
 
     private void Update()
     {
@@ -16,9 +17,29 @@ public class TileBasedSceneChanger : MonoBehaviour
 
         if (currentTile != null && IsOnValidTile(currentTile))
         {
+            if (targetObject != null)
+            {
+                targetObject.SetActive(true);
+            }
+
+            Debug.Log("Player is on a valid tile.");
+
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (SceneDataManager.Instance != null)
+                {
+                    SceneDataManager.Instance.lastPlayerPosition = transform.position;
+                }
+
+                Debug.Log("Loading scene: " + targetSceneName);
                 SceneManager.LoadScene(targetSceneName);
+            }
+        }
+        else
+        {
+            if (targetObject != null)
+            {
+                targetObject.SetActive(false);
             }
         }
     }

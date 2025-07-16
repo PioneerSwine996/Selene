@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetAxisRaw("Vertical") < 0)
         {
-            anim.SetBool("WalkS", true);
+            anim.SetBool("WalkS", true); 
         }
         else
         {
