@@ -2,7 +2,7 @@
 
 **Selene** is an interactive story-driven game focused on **suicide prevention, hope, and healing**. It aims to open conversations about mental health, reduce stigma, and empower players to seek help or support others who are struggling.
 
-> ⚠️ **Content Warning**: This game contains themes related to mental health and suicide. It is designed to educate and inspire hope, but may be triggering for some. Please play with care.
+> ⚠️ **Content Warning**: This game contains themes related to social anxiety. It is designed to educate and inspire hope, but may be triggering for some. Please play with care.
 
 ---
 
