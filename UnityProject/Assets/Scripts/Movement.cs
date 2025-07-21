@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator anim;
     private float xRotation;
 
+    public bool canMove = true;
+
 
 
     Vector2 movement;
@@ -20,12 +22,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (!canMove) return;
         Animation();
     }
 
     void FixedUpdate()
     {
+        if (!canMove) return;
+        Move();
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
@@ -34,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         movement.Normalize();
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void Animation()
